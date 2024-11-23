@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ivory Teste Campo Minado</title>
+
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+      <link rel="stylesheet" href="styles/index.css" />
+
+      <link rel="icon" href="https://ivoryit.com.br/wp-content/uploads/2024/06/cropped-favicon-min-32x32.png" sizes="32x32" />
+  </head>
+
+  <body>
+    <header class="mdl-color--grey-800">
+        <img src="img/logo_ivory.png" width="40px" />
+        <div>Teste Campo Minado</div>
+        <button id="run-code" class="mdl-button mdl-js-button mdl-button--raised mdl-color--cyan-300">Executar Código</button>
+        <button id="save-code" class="mdl-button mdl-js-button mdl-button--raised mdl-color--cyan-300">Salvar Código</button>
+        <button id="export-code" class="mdl-button mdl-js-button mdl-button--raised mdl-color--cyan-300">Exportar Código</button>
+        <div style="display: none;">
+            <button id="import-code" class="mdl-button mdl-js-button mdl-button--raised mdl-color--cyan-300">Importar Código</button>
+            <input type="file" id="importFile" accept=".xml" />
+        </div>
+    </header>
+
+    <main>
+      <div class="editor-column1">
+        <div class="blockly-editor">
+            <div id="blockly-editor-canva"></div>
+        </div>
+      </div>
+
+      <div class="editor-column2">
+        <h5>
+            <span class="material-symbols-outlined">preview</span>Visualizar
+        </h5>
+        <p class="mdl-typography--body-2">
+            Crie um algorítimo usando blocos para resolver o campo minado abaixo.
+        </p>
+
+        <div class="board">
+            <div id="row1">
+                <div class="button open column1"></div>
+                <div class="button open column2"></div>
+                <div class="button open column3"></div>
+                <div class="button open column4"></div>
+                <div class="button open column5"></div>
+                <div class="button open column6"></div>
+                <div class="button open column7"></div>
+                <div class="button open column8"><span>1</span></div>
+                <div class="button column9"><span class="material-symbols-outlined">bomb</span></div>
+            </div>
+            <div class="line2">
+                <div class="button open column1"></div>
+                <div class="button open column2"></div>
+                <div class="button open column3"></div>
+                <div class="button open column4"></div>
+                <div class="button open column5"></div>
+                <div class="button open column6"></div>
+                <div class="button open column7"></div>
+                <div class="button open column8"><span>1</span></div>
+                <div class="button open column9"><span>1</span></div>
+            </div>
+            <div id="row3">
+                <div class="button open column1"><span>1</span></div>
+                <div class="button open column2"><span>2</span></div>
+                <div class="button open column3"><span>2</span></div>
+                <div class="button open column4"><span>1</span></div>
+                <div class="button open column5"></div>
+                <div class="button open column6"></div>
+                <div class="button open column7"></div>
+                <div class="button open column8"></div>
+                <div class="button open column9"></div>
+            </div>
+            <div id="row4">
+                <div class="button column1"><span>1</span></div>
+                <div class="button column2"><span class="material-symbols-outlined">bomb</span></div>
+                <div class="button column3"><span class="material-symbols-outlined">bomb</span></div>
+                <div class="button open column4"><span>3</span></div>
+                <div class="button open column5"><span>2</span></div>
+                <div class="button open column6"><span>2</span></div>
+                <div class="button open column7"><span>1</span></div>
+                <div class="button open column8"><span>1</span></div>
+                <div class="button open column9"></div>
+            </div>
+            <div class="line5">
+                <div class="button column1"><span>1</span></div>
+                <div class="button column2"><span>2</span></div>
+                <div class="button column3"><span>3</span></div>
+                <div class="button column4"><span class="material-symbols-outlined">bomb</span></div>
+                <div class="button column5"><span class="material-symbols-outlined">bomb</span></div>
+                <div class="button column6"><span>4</span></div>
+                <div class="button column7"><span class="material-symbols-outlined">bomb</span></div>
+                <div class="button open column8"><span>2</span></div>
+                <div class="button open column9"><span>1</span></div>
+            </div>
+            <div id="row6">
+                <div class="button column1"></div>
+                <div class="button column2"></div>
+                <div class="button column3"><span>1</span></div>
+                <div class="button column4"><span>3</span></div>
+                <div class="button column5"><span class="material-symbols-outlined">bomb</span></div>
+                <div class="button column6"><span class="material-symbols-outlined">bomb</span></div>
+                <div class="button column7"><span>3</span></div>
+                <div class="button column8"><span class="material-symbols-outlined">bomb</span></div>
+                <div class="button column9"><span>2</span></div>
+            </div>
+            <div id="row7">
+                <div class="button column1"></div>
+                <div class="button column2"></div>
+                <div class="button column3"></div>
+                <div class="button column4"><span>1</span></div>
+                <div class="button column5"><span>2</span></div>
+                <div class="button column6"><span>2</span></div>
+                <div class="button column7"><span>2</span></div>
+                <div class="button column8"><span>2</span></div>
+                <div class="button column9"><span class="material-symbols-outlined">bomb</span></div>
+            </div>
+            <div id="row8">
+                <div class="button column1"></div>
+                <div class="button column2"></div>
+                <div class="button column3"></div>
+                <div class="button column4"></div>
+                <div class="button column5"></div>
+                <div class="button column6"></div>
+                <div class="button column7"></div>
+                <div class="button column8"><span>1</span></div>
+                <div class="button column9"><span>1</span></div>
+            </div>
+            <div id="row9">
+                <div class="button column1"></div>
+                <div class="button column2"></div>
+                <div class="button column3"></div>
+                <div class="button column4"></div>
+                <div class="button column5"></div>
+                <div class="button column6"></div>
+                <div class="button column7"></div>
+                <div class="button column8"></div>
+                <div class="button column9"></div>
+            </div>
+        </div>
+
+        <h5><span class="material-symbols-outlined">arrow_forward_ios</span> Resultado</h5>
+        <div id="output"></div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/blockly/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
+    <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+    <script src="https://unpkg.com/blockly/msg/en.js"></script>
+    <script src="scripts/minesweeper_blocks.js"></script>
+    <script src="scripts/minesweeper.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
