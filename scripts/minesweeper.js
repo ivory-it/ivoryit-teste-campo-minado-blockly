@@ -55,11 +55,6 @@ function CampoMinado() {
             {
                 tabuleiro += Jogo[x][y];
             }
-
-            if (x != 8)
-            {
-                tabuleiro +=  "" + "\r\n";
-            }
         }
 
         return tabuleiro;
@@ -79,6 +74,7 @@ function CampoMinado() {
     this.Abrir = function (linha, coluna) {
         if (linha >= 1 && linha <= 9 && coluna >= 1 && coluna <= 9)
         {
+            $("#row" + linha + " .column" + coluna).addClass('open');
             linha--;
             coluna--;
 
@@ -100,72 +96,84 @@ function CampoMinado() {
                     {
                         Jogo[4][0] = Solucao[4][0];
                         JogoTotalDeCasasAbertas++;
+                        $('#row5 .column1').addClass('open');
                     }
 
                     if (Jogo[4][1] == "-")
                     {
                         Jogo[4][1] = Solucao[4][1];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 5 + " .column" + 2).addClass('open');
                     }
 
                     if (Jogo[4][2] == "-")
                     {
                         Jogo[4][2] = Solucao[4][2];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 5 + " .column" + 3).addClass('open');
                     }
 
                     if (Jogo[5][2] == "-")
                     {
                         Jogo[5][2] = Solucao[5][2];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 6 + " .column" + 3).addClass('open');
                     }
 
                     if (Jogo[5][3] == "-")
                     {
                         Jogo[5][3] = Solucao[5][3];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 6 + " .column" + 4).addClass('open');
                     }
 
                     if (Jogo[6][3] == "-")
                     {
                         Jogo[6][3] = Solucao[6][3];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 7 + " .column" + 4).addClass('open');
                     }
 
                     if (Jogo[6][4] == "-")
                     {
                         Jogo[6][4] = Solucao[6][4];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 7 + " .column" + 5).addClass('open');
                     }
 
                     if (Jogo[6][5] == "-")
                     {
                         Jogo[6][5] = Solucao[6][5];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 7 + " .column" + 6).addClass('open');
                     }
 
                     if (Jogo[6][6] == "-")
                     {
                         Jogo[6][6] = Solucao[6][6];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 7 + " .column" + 7).addClass('open');
                     }
 
                     if (Jogo[6][7] == "-")
                     {
                         Jogo[6][7] = Solucao[6][7];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 7 + " .column" + 8).addClass('open');
                     }
 
                     if (Jogo[7][7] == "-")
                     {
                         Jogo[7][7] = Solucao[7][7];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 8 + " .column" + 8).addClass('open');
                     }
 
                     if (Jogo[7][8] == "-")
                     {
                         Jogo[7][8] = Solucao[7][8];
                         JogoTotalDeCasasAbertas++;
+                        $("#row" + 8 + " .column" + 9).addClass('open');
                     }
 
                     Jogo[5][0] = "0";
@@ -189,6 +197,27 @@ function CampoMinado() {
                     Jogo[8][6] = "0";
                     Jogo[8][7] = "0";
                     Jogo[8][8] = "0";
+                    $("#row" + 6 + " .column" + 1).addClass('open');
+                    $("#row" + 6 + " .column" + 2).addClass('open');
+                    $("#row" + 7 + " .column" + 1).addClass('open');
+                    $("#row" + 7 + " .column" + 2).addClass('open');
+                    $("#row" + 7 + " .column" + 3).addClass('open');
+                    $("#row" + 8 + " .column" + 1).addClass('open');
+                    $("#row" + 8 + " .column" + 2).addClass('open');
+                    $("#row" + 8 + " .column" + 3).addClass('open');
+                    $("#row" + 8 + " .column" + 4).addClass('open');
+                    $("#row" + 8 + " .column" + 5).addClass('open');
+                    $("#row" + 8 + " .column" + 6).addClass('open');
+                    $("#row" + 8 + " .column" + 7).addClass('open');
+                    $("#row" + 9 + " .column" + 1).addClass('open');
+                    $("#row" + 9 + " .column" + 2).addClass('open');
+                    $("#row" + 9 + " .column" + 3).addClass('open');
+                    $("#row" + 9 + " .column" + 4).addClass('open');
+                    $("#row" + 9 + " .column" + 5).addClass('open');
+                    $("#row" + 9 + " .column" + 6).addClass('open');
+                    $("#row" + 9 + " .column" + 7).addClass('open');
+                    $("#row" + 9 + " .column" + 8).addClass('open');
+                    $("#row" + 9 + " .column" + 9).addClass('open');
                     JogoTotalDeCasasAbertas += 21;
                 }
 

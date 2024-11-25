@@ -23,7 +23,7 @@
         <button id="run-code" class="mdl-button mdl-js-button mdl-button--raised mdl-color--cyan-300">Executar Código</button>
         <button id="save-code" class="mdl-button mdl-js-button mdl-button--raised mdl-color--cyan-300">Salvar Código</button>
         <button id="export-code" class="mdl-button mdl-js-button mdl-button--raised mdl-color--cyan-300">Exportar Código</button>
-        <div style="display: none;">
+        <div>
             <button id="import-code" class="mdl-button mdl-js-button mdl-button--raised mdl-color--cyan-300">Importar Código</button>
             <input type="file" id="importFile" accept=".xml" />
         </div>
@@ -56,7 +56,7 @@
                 <div class="button open column8"><span>1</span></div>
                 <div class="button column9"><span class="material-symbols-outlined">bomb</span></div>
             </div>
-            <div class="line2">
+            <div id="row2">
                 <div class="button open column1"></div>
                 <div class="button open column2"></div>
                 <div class="button open column3"></div>
@@ -89,7 +89,7 @@
                 <div class="button open column8"><span>1</span></div>
                 <div class="button open column9"></div>
             </div>
-            <div class="line5">
+            <div id="row5">
                 <div class="button column1"><span>1</span></div>
                 <div class="button column2"><span>2</span></div>
                 <div class="button column3"><span>3</span></div>
@@ -156,7 +156,9 @@
     <script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
     <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
     <script src="https://unpkg.com/blockly/msg/en.js"></script>
-    <script src="scripts/minesweeper_blocks.js"></script>
+    <script src="scripts/minesweeper_blocks_board.js"></script>
+    <script src="scripts/minesweeper_blocks_board_status.js"></script>
+    <script src="scripts/minesweeper_blocks_open_position.js"></script>
     <script src="scripts/minesweeper.js"></script>
     <script src="scripts/main.js"></script>
   </body>
