@@ -35,7 +35,7 @@ Além dos blocos para loops, condições, variáveis e cálculos. Você terá bl
 - String que contém os valores das casas do tabuleiro de forma linear, ou seja, a cada 9 caracteres, você tem uma nova linha. Esse é o valor do início do jogo:
 00000001-000000011122100000---322110-------21------------------------------------
 - Sempre que você abrir uma casa a variável é atualizada com os campos abertos.
-- `Valores númericos`: Números de minas terrestres que a posição possui em volta;
+- `Valores numéricos`: Números de minas terrestres que a posição possui em volta;
 - `Traço (-)`: Posições que ainda não foram abertas, a qual o seu algoritmo deve analisar o atributo Tabuleiro e tomar a decisão de abrir ou não.
 
 ![Status atual do jogo](https://github.com/ivory-it/ivoryit-teste-campo-minado-blockly/blob/main/img/7.png)
@@ -63,6 +63,6 @@ Como todos sabem, uma string é um vetor de caracteres, portanto o objetivo do a
 ## Dicas / Regras
 1. Ao codificar mantenha seu código organizado, com nomes de variáveis intuitivos. Manter padronização ajuda a equipe entender o que foi codificado;
 2. O algorítimo deve realizar uma analise conforme a seção Objetivo do jogo, e não um algoritmo de força bruta, abrindo todos as casas para se descobrir as minas terrestres para depois reabrir somente as que não tem minas terrestres;
-5. O algorítimo deve analisar a string que representa o tabuleiro, não é valido fixar a abertura das posições que não possuem minas terrestres;
-6. Não é para criar uma aplicação onde o usuário escolha qual posição abrir, é para ser um algorítimo autônomo que realize as jogadas;
-7. Qualquer duvida envie suas duvidas para o a qual recebeu o desafio.
+3. O algorítimo deve analisar a string que representa o tabuleiro, não é valido fixar a abertura das posições que não possuem minas terrestres;
+4. Não é para criar uma aplicação onde o usuário escolha qual posição abrir, é para ser um algorítimo autônomo que realize as jogadas;
+5. Qualquer duvida envie para o e-mail a qual recebeu o desafio.
