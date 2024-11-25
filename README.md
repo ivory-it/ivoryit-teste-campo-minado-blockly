@@ -29,6 +29,8 @@ Antes de enfrentar o desafio, que tal jogar algumas partidas para você entender
 Neste link (https://ivory-it.github.io/ivoryit-teste-campo-minado-blockly) temos uma IDE de desenvolvimento do desafio. É uma IDE de desenvolvimento usando blocos.
 Além dos blocos para loops, condições, variáveis e cálculos. Você terá blocos com valores e funções do Campo Minado.
 
+Veja esse vídeo para mais detalhes sobre o desafio: https://www.youtube.com/watch?v=9k7eU9q-GXM
+
 ![Explicação IDE](https://github.com/ivory-it/ivoryit-teste-campo-minado-blockly/blob/main/img/5.png)
 
 ![String Tabuleiro](https://github.com/ivory-it/ivoryit-teste-campo-minado-blockly/blob/main/img/6.png)
