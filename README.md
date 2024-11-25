@@ -26,40 +26,43 @@ Se no passo anterior descobrimos três minas terrestres, o item destacado em ama
 Antes de enfrentar o desafio, que tal jogar algumas partidas para você entender a dinâmica: https://minesweeper.online/
 
 # Desafio
-Neste repositório existe uma console application construída que instância a classe CampoMinado.
+Neste link (https://ivory-it.github.io/ivoryit-teste-campo-minado-blockly) temos uma IDE de desenvolvimento do desafio. É uma IDE de desenvolvimento usando blocos.
+Além dos blocos para loops, condições, variáveis e cálculos. Você terá blocos com valores e funções do Campo Minado.
 
-![Aplicação inicial](https://github.com/ivory-it/ivoryit-teste-campo-minado-blockly/blob/main/img/5.png)
+![Explicação IDE](https://github.com/ivory-it/ivoryit-teste-campo-minado-blockly/blob/main/img/5.png)
 
-Está classe é responsável por iniciar um novo jogo do campo minado. Nela temos disponíveis os seguintes atributos e métodos:
+![String Tabuleiro](https://github.com/ivory-it/ivoryit-teste-campo-minado-blockly/blob/main/img/6.png)
+- String que contém os valores das casas do tabuleiro de forma linear, ou seja, a cada 9 caracteres, você tem uma nova linha. Esse é o valor do início do jogo:
+00000001-000000011122100000---322110-------21------------------------------------
+- Sempre que você abrir uma casa a variável é atualizada com os campos abertos.
+- `Valores númericos`: Números de minas terrestres que a posição possui em volta;
+- `Traço (-)`: Posições que ainda não foram abertas, a qual o seu algoritmo deve analisar o atributo Tabuleiro e tomar a decisão de abrir ou não.
 
- - `campoMinado.Tabuleiro`: Retorna o tabuleiro atual no formato de `string`. Veja o que acontece quando imprimimos seu valor na tela (Linha 13 da imagem anterior):
- 
-![Aplicação inicial](https://github.com/ivory-it/ivoryit-teste-campo-minado-blockly/blob/main/img/6.png) 
-    - `Valores númericos`: Números de minas terrestres que a posição possui em volta;
-    - `Traço (-)`: Posições que ainda não foram abertas, a qual o seu algoritmo deve analisar o atributo Tabuleiro e tomar a decisão de abrir ou não.
-- `campoMinado.JogoStatus`: Atributo que retorna (inteiro) o status do jogo atual. A cada tentativa de abertura de uma posição o seu valor é alterado.
-    - `0`: Jogo em aberto, continue procurando as posições que não possuem minas terrestres;
-    - `1`: Vitoria, você encontrou todas as posições que não possuem minas terrestres;
-    - `2`: Game Over, você encontrou uma mina terrestre.
-- `campoMinado.Abrir(int linha, int coluna)`: Método responsável por abrir uma posição. Como o tabuleiro é uma matriz 9x9 , você deve informar linha e coluna entre 1 e 9 para abrir. Sempre que você pedir para abrir uma posição o atributo Tabuleiro é atualizado com a posição aberta e o atributo JogoStatus recebe um novo status (0, 1 ou 2). 
+![Status atual do jogo](https://github.com/ivory-it/ivoryit-teste-campo-minado-blockly/blob/main/img/7.png)
+- String que retorna o status do jogo à medida que você abre as casas. 
+0 = Jogo aberto, faltam casas para abrir, 1 = Vitória e 2 = Game Over.
+- Sempre que você abrir uma casa a variável é atualizada o status do jogo.
 
-Como todos sabem, uma string é um vetor de caracteres, portanto o objetivo do algoritmo é realizar a leitura da string Tabuleiro utilizando a lógica de identificação das minas terrestres conforme a sessão objetivo do jogo. Após analisar e identificar que é seguro abrir uma posição, seu algoritmo deve chamar o método Abrir da classe CampoMinado. Ao abrir todas as posições que não possuem minas terrestres o atributo JogoStatus irá receber o valor 1 de vitória.
+![Abrir casa da linha x e coluna y](https://github.com/ivory-it/ivoryit-teste-campo-minado-blockly/blob/main/img/8.png)
+- Função que executa a abertura da casa informada pelo número da linha e coluna. Ao abrir uma casa, na área de visualização a mesma é aberta, e na área de resultado é exibido o status do jogo. 
+
+Como todos sabem, uma string é um vetor de caracteres, portanto o objetivo do algoritmo é realizar a leitura da String Tabuleiro utilizando a lógica de identificação das minas terrestres conforme a sessão objetivo do jogo. Após analisar e identificar que é seguro abrir uma posição, seu algoritmo deve chamar o método "Abrir casa...". Ao abrir todas as posições que não possuem minas terrestres a variável "Status atual jogo" irá receber o valor 1 de vitória.
+
+## Sobre uso da IDE
+- Botão EXECUTAR CÓDIGO: Executa o algorítimo criado;
+- Botão SALVAR CÓDIGO: Salva o algoritmo criado no local storage do navegador. Com isso você pode fechar o navegador, ao voltar a IDE irá carregar seu código de forma automática. Atenção, ao limpar informações do browser o seu código irá ser apagado;
+- Botão EXPORTAR CÓDIGO: Gera um XML com o seu algorítimo;
+- Botão IMPORTAR CÓDIGO: Uma vez com o XML salvo, você pode importar ele usando o campo para carregar arquivo e clicando no botão seu código é restaurado.
 
 ## Roteiro
-1. Ter uma conta no GitHub;
-2. Criar um novo projeto no GitHub e realizar o clone do mesmo em sua máquina;
-3. Baixar o código fonte inicial [neste link](https://github.com/ivory-it/ivoryit-testeestagio-campo-minado/archive/master.zip);
-4. Colocar o projeto no diretório do projeto clonado da sua conta do GitHub;
-5. Ter instalado em sua máquina o [.net core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.201-windows-x64-installer);
-6. Ter instaldo em sua máquina [Visual Studio 2019 Comunnity ou VSCODE (Todos são gratuitos)](https://visualstudio.microsoft.com/pt-br/)
-7. Após instalação das IDEs, abra a solução para iniciar a códificação (Ivory.TesteEstagio.CampoMinado.sln);
-8. Após finalizar e ter o algoritimo completo, basta subir as alterações (commit/push) para sua conta e responder o e-mail do teste com o link da sua conta no GitHub, para que possamos analisar sua codificação.
+1. Acessar a IDE: https://ivory-it.github.io/ivoryit-teste-campo-minado-blockly;
+2. Criar seu algorítimo;
+3. Desafio concluído, clique em exportar para gerar o XML com seu código;
+4. Envio seu arquivo respondendo o e-mail a qual você recebeu o desafio.
 
 ## Dicas / Regras
-1. Ao codificar matenha seu código limpo e coerente. Manter padronização ajuda a equipe entender o que foi codificado, além de ajudar nas manutenções futuras. Algumas dicas: [Padronização Códificação](https://github.com/ivory-it/ivoryit-testeestagio-detetive/wiki/Padroniza%C3%A7%C3%A3o-codifica%C3%A7%C3%A3o);
-2. A classe `CampoMinado.cs` não pode ser modificada;
-3. É permitido ter apenas uma instância da classe `CampoMinado.cs`;
-4. O algoritimo deve realizar uma analise conforme a seção Objetivo do jogo e não um algoritmo de força bruta, abrindo todos as casas para se descobrir as minas terrestres para depois reabrir somente as que não tem minas terrestres;
-5. O algoritimo deve analisar a string que representa o tabuleiro, não é valido fixar a abertura das posições que não possuem minas terrestres pela analise do algoritmo `CampoMinado.cs`;
-6. Não é para criar uma aplicação onde o usuário escolha qual posição abrir, é para ser um algoritimo autonomo que realize as jogadas;
-7. Qualquer duvida entre em contato: thiago.resende@ivoryit.com.br
+1. Ao codificar mantenha seu código organizado, com nomes de variáveis intuitivos. Manter padronização ajuda a equipe entender o que foi codificado;
+2. O algorítimo deve realizar uma analise conforme a seção Objetivo do jogo, e não um algoritmo de força bruta, abrindo todos as casas para se descobrir as minas terrestres para depois reabrir somente as que não tem minas terrestres;
+5. O algorítimo deve analisar a string que representa o tabuleiro, não é valido fixar a abertura das posições que não possuem minas terrestres;
+6. Não é para criar uma aplicação onde o usuário escolha qual posição abrir, é para ser um algorítimo autônomo que realize as jogadas;
+7. Qualquer duvida envie suas duvidas para o a qual recebeu o desafio.
